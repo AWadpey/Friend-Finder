@@ -7,9 +7,9 @@ module.exports = function(app) {
     });
 
 
-    //figure out how to set up the body with the new data being entered
     app.post("/api/friends", function(req, res){
+        friends.friends.push(req.body);
+        res.json(true);
+    });
 
-    })
-
-}
+};
