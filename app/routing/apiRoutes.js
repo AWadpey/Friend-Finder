@@ -23,9 +23,9 @@ module.exports = function(app) {
 
 		var scoreArray = [];
 
-		for(var i = 0; i < friendData.length; i++) {
+		for(var i = 0; i < friendsData.length; i++) {
 
-			var scoreComparison = friendData[i];
+			var scoreComparison = friendsData[i];
 			var scoreDifference = 0;
 			
 			for(var k = 0; k < scoreComparison.scores.length; k++) {
@@ -36,19 +36,19 @@ module.exports = function(app) {
 			scoreArray[i] = scoreDifference;
 		}
 
-		var bestFriendNum = scoreArray[0];
-		var bestFriendIndex = 0;
+		var myNewFriend = scoreArray[0];
+		var friendIndex = 0;
 
 		for(var i = 1; i < scoreArray.length; i++) {
-			if(scoreArray[i] < bestFriendNum) {
-				bestFriendNum = scoreArray[i];
-				bestFriendIndex = i;
+			if(scoreArray[i] < myNewFriend) {
+				myNewFriend = scoreArray[i];
+				friendIndex = i;
 			}
 		}
 
-		friendData.push(myFriend);
+		friendsData.push(myFriend);
 
-		res.json(friendData[bestFriendIndex]);
+		res.json(friendsData[friendIndex]);
     });
 
 };

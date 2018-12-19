@@ -7,8 +7,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
 </head>
@@ -19,7 +18,7 @@
             background-color: black;
         }
         .jumbotron {
-            background-image: url("images/bkg-img.jpg");
+            background-image: url("http://www.usclimateplan.org/wp-content/uploads/2018/11/cool-interactive-desktop-backgrounds-background-clean-for-genuine-0.jpg");
             background-color: black;
             background-size: 60% 110%;
             background-repeat: no-repeat;
@@ -183,6 +182,13 @@
             </div>
         </div>
     </div>
+    <hr>
+    <footer class="footer">
+        <div class="container">
+            <p><a href="/api/friends">API Table Link</a> | <a href="https://github.com/AWadpey/Friend-Finder">Github
+                    Repo</a>
+        </div>
+    </footer>
 
     <!-- Results -->
     <div id="results-modal" class="modal fade" role="dialog">
@@ -195,8 +201,7 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
-                    <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg"
-                        alt="">
+                    <img id="match-img" src="http://images6.fanpop.com/image/photos/36800000/Mr-T-mrt-36834265-300-238.png" alt="Friendo!">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cya!</button>
@@ -208,11 +213,11 @@
 
     <script type="text/javascript">
         $("#submit").on("click", function (event) {
-            event.preventDefault();
+            // event.preventDefault();
 
             var userSurvey = {
                 name: $("#name").val().trim(),
-                photo: $("#photo").val.trim(),
+                photo: $("#photo").val().trim(),
                 scores: [
                     $('#question1').val().trim(),
                     $('#question2').val().trim(),
@@ -235,7 +240,7 @@
                 });
             return false;
         });
-        
+
     </script>
 </body>
 
