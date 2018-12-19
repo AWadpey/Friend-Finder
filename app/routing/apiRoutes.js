@@ -1,4 +1,4 @@
-var friendsData = require("../data/friends");
+var friendsData = require("../data/friends.js");
 
 module.exports = function(app) {
 
@@ -11,13 +11,13 @@ module.exports = function(app) {
         
         var myFriend = req.body;
 
-		for(var i = 0; i < myFriend.scores.length; i++) {
-			if(myFriend.scores[i] == "1 - Strongly Disagree") {
-				myFriend.scores[i] = 1;
-			} else if(myFriend.scores[i] == "5 - Strongly Agree") {
-				myFriend.scores[i] = 5;
+		for(var i = 0; i < myFriend.score.length; i++) {
+			if(myFriend.score[i] == "1 - Strongly Disagree") {
+				myFriend.score[i] = 1;
+			} else if(myFriend.score[i] == "5 - Strongly Agree") {
+				myFriend.score[i] = 5;
 			} else {
-				myFriend.scores[i] = parseInt(myFriend.scores[i]);
+				myFriend.score[i] = parseInt(myFriend.score[i]);
 			}
 		}
 
@@ -28,8 +28,8 @@ module.exports = function(app) {
 			var scoreComparison = friendsData[i];
 			var scoreDifference = 0;
 			
-			for(var k = 0; k < scoreComparison.scores.length; k++) {
-				var differenceOneScore = Math.abs(scoreComparison.scores[k] - myFriend.scores[k]);
+			for(var a = 0; a < scoreComparison.score.length; a++) {
+				var differenceOneScore = Math.abs(scoreComparison.score[a] - myFriend.score[a]);
 				scoreDifference += differenceOneScore;
 			}
 
@@ -39,9 +39,9 @@ module.exports = function(app) {
 		var myNewFriend = scoreArray[0];
 		var friendIndex = 0;
 
-		for(var i = 1; i < scoreArray.length; i++) {
-			if(scoreArray[i] < myNewFriend) {
-				myNewFriend = scoreArray[i];
+		for(var i = 1; i < scoreDifference.length; i++) {
+			if(scoreDifference < myNewFriend) {
+				myNewFriend = scoreDifference;
 				friendIndex = i;
 			}
 		}
