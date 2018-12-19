@@ -7,14 +7,32 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <style>
-        body{
-            background-color:black;
+        body {
+            background-color: black;
+        }
+        .jumbotron {
+            background-image: url("images/bkg-img.jpg");
+            background-color: black;
+            background-size: 60% 110%;
+            background-repeat: no-repeat;
+            background-position: right center;
+            color: white;
         }
     </style>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text">Friend in me!</h1>
+        </div>
+    </div>
     <div class="container">
         <div class="card">
             <h3 class="card-header">Personality Test</h3>
@@ -24,169 +42,201 @@
                 <hr>
                 <!-- ask name and photo -->
                 <h6>Name (Required)</h6>
-                    <input type="text" id="name" class="form-control" required="">
+                <input type="text" id="name" class="form-control" required="">
 
                 <h6>Link to Photo Image (Required)</h6>
-                    <input type="text" id="photo" class="form-control" required="">
-                        <hr>
-                        <!-- //start questions -->
-                        <h4><strong>Question 1</strong></h4>
-                        <p>Pepsi is better than Coke.</p>
-                        <div class="form-group">
-                            <select class="chosen-select" required>
-                                <option value="">Thoughts?</option>
-                                <option value="1">1 - Strongly Disagree</option>
-                                <option value="2">2 - Disagree</option>
-                                <option value="3">3 - Neutral</option>
-                                <option value="4">4 - Agree</option>
-                                <option value="5">5 - Strongly Agree</option>
-                            </select>
-                        </div>
-                        <hr>
-                        <h4><strong>Question 2</strong></h4>
-                        <p>Pineapples belong on pizza.</p>
-                        <div class="form-group">
-                            <select class="chosen-select" required>
-                                <option value="">Thoughts?</option>
-                                <option value="1">1 - Strongly Disagree</option>
-                                <option value="2">2 - Disagree</option>
-                                <option value="3">3 - Neutral</option>
-                                <option value="4">4 - Agree</option>
-                                <option value="5">5 - Strongly Agree</option>
-                            </select>
-                        </div>
-                        <hr>
-                        <h4><strong>Question 3</strong></h4>
-                        <p>The Earth is flat.</p>
-                        <div class="form-group">
-                            <select class="chosen-select" required>
-                                <option value="">Thoughts?</option>
-                                <option value="1">1 - Strongly Disagree</option>
-                                <option value="2">2 - Disagree</option>
-                                <option value="3">3 - Neutral</option>
-                                <option value="4">4 - Agree</option>
-                                <option value="5">5 - Strongly Agree</option>
-                            </select>
-                        </div>
-                        <hr>
-                        <h4><strong>Question 4</strong></h4>
-                        <p>Trix are for kids.</p>
-                        <div class="form-group">
-                            <select class="chosen-select" required>
-                                <option value="">Thoughts?</option>
-                                <option value="1">1 - Strongly Disagree</option>
-                                <option value="2">2 - Disagree</option>
-                                <option value="3">3 - Neutral</option>
-                                <option value="4">4 - Agree</option>
-                                <option value="5">5 - Strongly Agree</option>
-                            </select>
-                        </div>
-                        <hr>
-                        <h4><strong>Question 5</strong></h4>
-                        <p>The chicken came before the egg.</p>
-                        <div class="form-group">
-                            <select class="chosen-select" required>
-                                <option value="">Thoughts?</option>
-                                <option value="1">1 - Strongly Disagree</option>
-                                <option value="2">2 - Disagree</option>
-                                <option value="3">3 - Neutral</option>
-                                <option value="4">4 - Agree</option>
-                                <option value="5">5 - Strongly Agree</option>
-                            </select>
-                        </div>
-                        <hr>
-                        <h4><strong>Question 6</strong></h4>
-                        <p>You love clowns.</p>
-                        <div class="form-group">
-                            <select class="chosen-select" required>
-                                <option value="">Thoughts?</option>
-                                <option value="1">1 - Strongly Disagree</option>
-                                <option value="2">2 - Disagree</option>
-                                <option value="3">3 - Neutral</option>
-                                <option value="4">4 - Agree</option>
-                                <option value="5">5 - Strongly Agree</option>
-                            </select>
-                        </div>
-                        <hr>
-                        <h4><strong>Question 7</strong></h4>
-                        <p>Han shot Greedo first.</p>
-                        <div class="form-group">
-                            <select class="chosen-select" required>
-                                <option value="">Thoughts?</option>
-                                <option value="1">1 - Strongly Disagree</option>
-                                <option value="2">2 - Disagree</option>
-                                <option value="3">3 - Neutral</option>
-                                <option value="4">4 - Agree</option>
-                                <option value="5">5 - Strongly Agree</option>
-                            </select>
-                        </div>
-                        <hr>
-                        <h4><strong>Question 8</strong></h4>
-                        <p>Bingo competitions keep grandmas off the streets.</p>
-                        <div class="form-group">
-                            <select class="chosen-select" required>
-                                <option value="">Thoughts?</option>
-                                <option value="1">1 - Strongly Disagree</option>
-                                <option value="2">2 - Disagree</option>
-                                <option value="3">3 - Neutral</option>
-                                <option value="4">4 - Agree</option>
-                                <option value="5">5 - Strongly Agree</option>
-                            </select>
-                        </div>
-                        <hr>
-                        <h4><strong>Question 9</strong></h4>
-                        <p>Surveys like this are fun.</p>
-                        <div class="form-group">
-                            <select class="chosen-select" required>
-                                <option value="">Thoughts?</option>
-                                <option value="1">1 - Strongly Disagree</option>
-                                <option value="2">2 - Disagree</option>
-                                <option value="3">3 - Neutral</option>
-                                <option value="4">4 - Agree</option>
-                                <option value="5">5 - Strongly Agree</option>
-                            </select>
-                        </div>
-                        <hr>
-                        <h4><strong>Question 10</strong></h4>
-                        <p>This app is better than Tinder.</p>
-                        <div class="form-group">
-                            <select class="chosen-select" required>
-                                <option value="">Thoughts?</option>
-                                <option value="1">1 - Strongly Disagree</option>
-                                <option value="2">2 - Disagree</option>
-                                <option value="3">3 - Neutral</option>
-                                <option value="4">4 - Agree</option>
-                                <option value="5">5 - Strongly Agree</option>
-                            </select>
-                        </div>
-                        <hr>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
-                                aria-hidden="true"></i> Submit</button>
+                <input type="text" id="photo" class="form-control" required="">
+                <hr>
+                <!-- //start questions -->
+                <h4><strong>Question 1</strong></h4>
+                <p>Pepsi is better than Coke.</p>
+                <div class="form-group">
+                    <select class="chosen-select" id="question1" required>
+                        <option value="">Thoughts?</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+                <hr>
+                <h4><strong>Question 2</strong></h4>
+                <p>Pineapples belong on pizza.</p>
+                <div class="form-group">
+                    <select class="chosen-select" id="question2" required>
+                        <option value="">Thoughts?</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+                <hr>
+                <h4><strong>Question 3</strong></h4>
+                <p>The Earth is flat.</p>
+                <div class="form-group">
+                    <select class="chosen-select" id="question3" required>
+                        <option value="">Thoughts?</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+                <hr>
+                <h4><strong>Question 4</strong></h4>
+                <p>Trix are for kids.</p>
+                <div class="form-group">
+                    <select class="chosen-select" id="question4" required>
+                        <option value="">Thoughts?</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+                <hr>
+                <h4><strong>Question 5</strong></h4>
+                <p>The chicken came before the egg.</p>
+                <div class="form-group">
+                    <select class="chosen-select" id="question5" required>
+                        <option value="">Thoughts?</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+                <hr>
+                <h4><strong>Question 6</strong></h4>
+                <p>You love clowns.</p>
+                <div class="form-group">
+                    <select class="chosen-select" id="question6" required>
+                        <option value="">Thoughts?</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+                <hr>
+                <h4><strong>Question 7</strong></h4>
+                <p>Han shot Greedo first.</p>
+                <div class="form-group">
+                    <select class="chosen-select" id="question7" required>
+                        <option value="">Thoughts?</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+                <hr>
+                <h4><strong>Question 8</strong></h4>
+                <p>Bingo competitions keep grandmas off the streets.</p>
+                <div class="form-group">
+                    <select class="chosen-select" id="question8" required>
+                        <option value="">Thoughts?</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+                <hr>
+                <h4><strong>Question 9</strong></h4>
+                <p>Surveys like this are fun.</p>
+                <div class="form-group">
+                    <select class="chosen-select" id="question9" required>
+                        <option value="">Thoughts?</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+                <hr>
+                <h4><strong>Question 10</strong></h4>
+                <p>This app is better than Tinder.</p>
+                <div class="form-group">
+                    <select class="chosen-select" id="question10" required>
+                        <option value="">Thoughts?</option>
+                        <option value="1">1 - Strongly Disagree</option>
+                        <option value="2">2 - Disagree</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Agree</option>
+                        <option value="5">5 - Strongly Agree</option>
+                    </select>
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+                        aria-hidden="true"></i> Submit</button>
             </div>
         </div>
     </div>
+
+    <!-- Results -->
+    <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h2 class="modal-title"><strong>It's me!</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="match-name"></h2>
+                    <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg"
+                        alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cya!</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+
+            var userSurvey = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val.trim(),
+                scores: [
+                    $('#question1').val().trim(),
+                    $('#question2').val().trim(),
+                    $('#question3').val().trim(),
+                    $('#question4').val().trim(),
+                    $('#question5').val().trim(),
+                    $('#question6').val().trim(),
+                    $('#question7').val().trim(),
+                    $('#question8').val().trim(),
+                    $('#question9').val().trim(),
+                    $('#question10').val().trim(),
+                ]
+            };
+
+            $.post("/api/friends", userSurvey,
+                function (data) {
+                    $('#match-name').text(data.name);
+                    $('#match-img').attr('src', data.photo);
+                    $('#results-modal').modal('toggle');
+                });
+            return false;
+        });
+        
+    </script>
 </body>
 
 </html>
-
-<script type="text/javascript">
-    $("#submit").on("click", function(event){
-        event.preventDefault();
-
-        // var survey = {
-        //     name: $("#name").val().trim(),
-        //     photo: ,
-
-
-        // };
-
-        $.post("/api/friends", survy,
-        function(data){
-            if(data){
-                alert()
-            }
-        })
-
-
-    })
-</script>

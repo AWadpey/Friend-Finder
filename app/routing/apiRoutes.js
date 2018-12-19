@@ -8,8 +8,47 @@ module.exports = function(app) {
 
 
     app.post("/api/friends", function(req, res){
-        friends.friends.push(req.body);
-        res.json(true);
+        
+        var myFriend = req.body;
+
+		for(var i = 0; i < myFriend.scores.length; i++) {
+			if(myFriend.scores[i] == "1 - Strongly Disagree") {
+				myFriend.scores[i] = 1;
+			} else if(myFriend.scores[i] == "5 - Strongly Agree") {
+				myFriend.scores[i] = 5;
+			} else {
+				myFriend.scores[i] = parseInt(myFriend.scores[i]);
+			}
+		}
+
+		var scoreArray = [];
+
+		for(var i = 0; i < friendData.length; i++) {
+
+			var scoreComparison = friendData[i];
+			var scoreDifference = 0;
+			
+			for(var k = 0; k < scoreComparison.scores.length; k++) {
+				var differenceOneScore = Math.abs(scoreComparison.scores[k] - myFriend.scores[k]);
+				scoreDifference += differenceOneScore;
+			}
+
+			scoreArray[i] = scoreDifference;
+		}
+
+		var bestFriendNum = scoreArray[0];
+		var bestFriendIndex = 0;
+
+		for(var i = 1; i < scoreArray.length; i++) {
+			if(scoreArray[i] < bestFriendNum) {
+				bestFriendNum = scoreArray[i];
+				bestFriendIndex = i;
+			}
+		}
+
+		friendData.push(myFriend);
+
+		res.json(friendData[bestFriendIndex]);
     });
 
 };
